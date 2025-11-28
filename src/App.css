@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Шапка */
+.header {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.avatar {
+  font-size: 40px;
+  background: #667eea;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.points {
+  color: #667eea;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Кнопки */
+.btn, .btn-main, .btn-exit, .btn-back {
+  width: 100%;
+  padding: 18px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn {
+  background: white;
+  color: #667eea;
+}
+
+.btn-main {
+  background: #4CAF50;
+  color: white;
+  font-size: 24px;
+}
+
+.btn-exit {
+  background: #f44336;
+  color: white;
+}
+
+.btn-back {
+  background: rgba(255,255,255,0.3);
+  color: white;
+  margin-top: 20px;
+}
+
+.btn:hover, .btn-main:hover, .btn-exit:hover, .btn-back:hover {
+  transform: scale(1.05);
+}
+
+/* Рейтинг */
+.rating-list {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.rating-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.gold {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+.silver {
+  background: linear-gradient(135deg, #C0C0C0, #808080);
+}
+
+.bronze {
+  background: linear-gradient(135deg, #CD7F32, #8B4513);
+}
+
+.place {
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 30px;
+}
+
+.user-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.user-points {
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* Конкурсы */
+.contest-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 15px 0;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contest-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.contest-card h3 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.contest-card p {
+  color: #666;
+  margin: 10px 0;
+}
+
+.progress {
+  background: #e0e0e0;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-weight: bold;
+  color: #667eea;
+}
+/* Профиль */
+.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.current-avatar {
+  font-size: 100px;
+  margin-bottom: 15px;
+}
+
+.profile-card h3 {
+  color: #333;
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.profile-points {
+  color: #667eea;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Выбор аватарки */
+.avatar-selector {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.avatar-selector h3 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.avatar-option {
+  font-size: 40px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+  border: 3px solid transparent;
+}
+
+.avatar-option:hover {
+  background: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.avatar-option.selected {
+  background: #667eea;
+  border: 3px solid #4a5fc1;
+  transform: scale(1.1);
+}
+
+/* Аватарка кликабельная */
+.avatar.clickable {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.avatar.clickable:hover {
+  transform: scale(1.1);
+}
+/* QR код страница */
+.qr-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.qr-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.qr-card p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.qr-info {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.qr-info p {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.btn-trash {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
