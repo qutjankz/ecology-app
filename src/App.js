@@ -14,7 +14,7 @@ function App() {
   if (page === 'login') {
     return (
       <div className="container">
-        <h1>🌿 ЭкоПриложение</h1>
+        <h1>🌿 Taza Aqketik!</h1>
         <button onClick={() => setPage('main')} className="btn-main">
           Кіру
         </button>
@@ -208,8 +208,8 @@ function App() {
         
         <div className="contest-card">
           <div className="contest-icon">👕</div>
-          <h3>Футболка ұтып ал!</h3>
-          <p>1000 ұпай жинаңыз және ЭкоФутболка алыңыз</p>
+          <h3>Жиде ұтып ал!</h3>
+          <p>1000 ұпай жинаңыз және жиде ұтып алыңыз</p>
           <div className="progress">
             <div className="progress-bar" style={{width: `${(userPoints/1000)*100}%`}}></div>
           </div>
@@ -218,8 +218,8 @@ function App() {
 
         <div className="contest-card">
           <div className="contest-icon">🎒</div>
-          <h3>Экорюкзак</h3>
-          <p>2500 ұпай жинап, рюкзак алыңыз</p>
+          <h3>Жолдорба!</h3>
+          <p>2500 ұпай жинап, жолдорба ұтып алыңыз</p>
           <div className="progress">
             <div className="progress-bar" style={{width: `${(userPoints/2500)*100}%`}}></div>
           </div>
